@@ -1,0 +1,50 @@
+"
+<xml xmlns="http://www.w3.org/1999/xhtml">
+    <block type="maze_start" id="mCfN,HOhumUcO/8kZwn)" deletable="false" movable="false" x="20" y="20">
+        <next>
+            <block type="maze_repeat_internal" id="qqyPXE|HC7:U@vY0._Y-">
+                <field name="TIMES">3</field>
+                <statement name="DO">
+                    <block type="maze_controls_until" id="=Dps;`ewcY3l}xBz]#Q6">
+                        <value name="BOOL">
+                            <block type="maze_balloon_in_direction" id="`/1JTn_*B~bwh{Uv/N;c">
+                                <field name="DIR">isBalloonHere</field>
+                            </block>
+                        </value>
+                        <statement name="DO">
+                            <block type="maze_moveForward" id="+V2n+{eE_4a(12+)3OaM"></block>
+                        </statement>
+                        <next>
+                            <block type="maze_takeCargo" id="2!v7Z.P+YW-j5gRF?V68">
+                                <next>
+                                    <block type="maze_controls_until" id="GiGZa^Bu7gh66nGIt3u3">
+                                        <value name="BOOL">
+                                            <block type="maze_dynamite_in_direction" id="-k.aN83m0|9%4s{()y?U">
+                                                <field name="DIR">isDynamiteForward</field>
+                                            </block>
+                                        </value>
+                                        <statement name="DO">
+                                            <block type="maze_moveForward" id="o=2i6DF]kSS[g|,QEQP9"></block>
+                                        </statement>
+                                        <next>
+                                            <block type="maze_turn" id="ynjW4J5uNrC{5?vU9sd=">
+                                                <field name="DIR">turnRight</field>
+                                            </block>
+                                        </next>
+                                    </block>
+                                </next>
+                            </block>
+                        </next>
+                    </block>
+                </statement>
+                <next>
+                    <block type="maze_moveForward" id="*8#hWlL9)|)~vP|:@aoW">
+                        <next>
+                            <block type="maze_takeCargo" id="=I`3q82s!Y/U~939w/*b"></block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
+</xml>"
